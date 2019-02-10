@@ -1,6 +1,6 @@
 {% extends "bootstrap/base.html" %}
 {% block head %} 
-	<title>Show or No Show</title>
+	<title>Diagnosis Assistant</title>
 	{{ super() }}
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
   	<!-- Main Stylesheet File -->
@@ -21,15 +21,16 @@
 
     	<div id="logo" class="pull-left">
         	<a href="{{ url_for('index') }}">
-        		<p id="movieHeading" style="font-size:180%; font-weight:bold; color:white; display:inline-block">Show or NoShow</p> 
+        		<p id="movieHeading" style="font-size:180%; font-weight:bold; color:white; display:inline-block">Diagnosis Assistant</p> 
         	</a>
         </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="{{ url_for('index') }}">Home</a></li>
-          <li><a href="{{ url_for('about') }}">About Us</a></li>
-          <li><a href="{{ url_for('predict') }}">Predict</a></li>          
+          <li><a href="{{ url_for('about') }}">Intro</a></li>
+          <li><a href="{{ url_for('predict') }}">Predict</a></li>
+          <li><a href="{{ url_for('predict_lifestyle') }}">Predict NCD</a></li>         
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

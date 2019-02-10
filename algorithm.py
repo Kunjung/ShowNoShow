@@ -5,7 +5,9 @@ import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
 
-df_s = pd.read_csv('noshow.csv')
+print("Launching Algorithm #1: Show/NoShow")
+
+df_s = pd.read_csv('data/noshow.csv')
 
 """###Preprocessin Data"""
 

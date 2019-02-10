@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+	<h1>Find NCDs (Non Communicable/ Life Style Diseases)</h1>
+	<h3>Predict the likelihood of 10 different LifeStyle Diseases based on Patient's Lifestyle Choices</h3>
+
+	<div class="col-md-4 col-md-offset-4">
+		<h2>Prediction NCD</h2>
+
+		{% if most_likely_disease %}
+			<h3> The NCD you're most likely to get is {{ most_likely_disease | upper }} </h3>
+
+
+			<h4>breast cancer {{ d1 }} </h4>
+			<h4>diabetes {{ d2 }} </h4>
+			
+			<h4>gastritis {{ d3 }} </h4>
+			<h4>heart disease {{ d4 }} </h4>
+			
+			<h4>hypertension {{ d5 }} </h4>
+			<h4>kidney disease {{ d6 }} </h4>
+
+			<h4>multiple sclerosis {{ d7 }} </h4>
+			<h4>prostate cancer {{ d8 }} </h4>
+			
+			<h4>schizophrenia {{ d9 }} </h4>
+			<h4>skin cancer {{ d10 }} </h4>
+
+		{% endif %}
+		
+		<hr>
+		<h1><a href="{{ url_for('predict_lifestyle') }}">New NCD Prediction</a></h1>
+	</div>
+</div>
+
+{% endblock %}

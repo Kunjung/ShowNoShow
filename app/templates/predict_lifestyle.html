@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="container">
+	<h1>Find NCDs (Non Communicable/ Life Style Diseases)</h1>
+	<h3>Predict the likelihood of 10 different LifeStyle Diseases based on Patient's Lifestyle Choices</h3>
+	
+	<div class="col-md-4 col-md-offset-4">
+		<form class="form-signin" method="POST" action="{{url_for('predict_lifestyle')}}">
+			<h2 class="form-signin-heading">Fill the Values below Please</h2>
+			{{ form.hidden_tag() }}
+			{{ wtf.form_field(form.male) }}
+			{{ wtf.form_field(form.marital_status) }}
+			{{ wtf.form_field(form.children) }}
+			{{ wtf.form_field(form.avg_commute) }}
+			{{ wtf.form_field(form.daily_internet_use) }}
+			{{ wtf.form_field(form.available_vehicles) }}
+
+			{{ wtf.form_field(form.military_service) }}
+			{{ wtf.form_field(form.employed) }}
+			{{ wtf.form_field(form.retired) }}
+			{{ wtf.form_field(form.student) }}
+			{{ wtf.form_field(form.education_bachelors) }}
+			{{ wtf.form_field(form.education_highschool) }}
+
+
+
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Predict NCD Probabilities</button>
+		</form>
+	</div>
+</div>
+
+
+{% endblock %}

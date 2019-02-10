@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Show or NoShow</title>
+  <title>Diagnosis Assistant</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -52,10 +52,11 @@
       <div class="wow fadeIn">
         
         <p id="movieHeading" style="font-size:400%; font-weight:bold; color:white">  </p>
-        <h2>Predict Future Appointments</h2>
+        <h2>Assist medical practitioners make better decisions with the help of Statistical Data Driven Algorithms.
+        </h2>
         <div class="actions">
-          <a href="{{ url_for('predict') }}" class="btn-get-started">Begin Prediction</a>
-        
+          <a href="{{ url_for('predict') }}" class="btn-get-started">Show/NoShow</a>
+          <a href="{{ url_for('predict_lifestyle') }}" class="btn-get-started">Find NCDs</a>
         </div>
       </div>
     </div>

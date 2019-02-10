@@ -9,7 +9,7 @@ function setup() {
   bestPhrase = select("#movieHeading");
   //var canvas = createCanvas(600, 400);
   //canvas.parent("#movieHeading");
-  target = "Show or No Show";
+  target = "Diagnosis Assistant";
   mutationRate = 0.002;
   maxPopulation = 670;
   population = new Population(target, mutationRate, maxPopulation);

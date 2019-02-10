@@ -4,22 +4,24 @@
 
 
 <div class="container">
+	<h1>Show or No Show</h1>
+	<h3>Predict if patients will show up to their appointments or not</h3>
 	<div class="col-md-4 col-md-offset-4">
 		<h2>Prediction</h2>
 		{% if show_prob and noshow_prob %}
 
-			<h3 style="color:green">The Patient will show with a probability of {{ show_prob }} % </h3>
+			<h3 style="color:green">The Patient will show with a probability of {{ show_prob }}  </h3>
 
 			<br>
 			<hr>
 			<br>
-			<h3 style="color:red">The Patient will notshow with a probability of {{ noshow_prob }} % </h3>
+			<h3 style="color:red">The Patient will notshow with a probability of {{ noshow_prob }}  </h3>
 
 		{% endif %}
 		<br>
 		<hr>
 		<br>
-		<h1 style="color:white; background-color:#BBB1A5"><a href="{{ url_for('predict') }}">New Prediction</a></h1>
+		<h1><a href="{{ url_for('predict') }}">New Prediction</a></h1>
 	</div>
 </div>
 
