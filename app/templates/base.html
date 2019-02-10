@@ -1,0 +1,47 @@
+{% extends "bootstrap/base.html" %}
+{% block head %} 
+	<title>Show or No Show</title>
+	{{ super() }}
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
+  	<!-- Main Stylesheet File -->
+  	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+ 
+    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+ 
+{% endblock %}
+
+
+
+{% block body %}
+<!--==========================
+  Header Section
+============================-->
+  <header id="header">
+    <div class="container">
+
+    	<div id="logo" class="pull-left">
+        	<a href="{{ url_for('index') }}">
+        		<p id="movieHeading" style="font-size:180%; font-weight:bold; color:white; display:inline-block">Show or NoShow</p> 
+        	</a>
+        </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+          <li><a href="{{ url_for('predict') }}">Predict</a></li>          
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+<br>
+
+
+{% block content %}
+{% endblock %}
+
+
+
+
+{% endblock %}

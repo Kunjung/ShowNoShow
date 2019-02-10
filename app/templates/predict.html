@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="container">
+	<div class="col-md-4 col-md-offset-4">
+
+		<form class="form-signin" method="POST" action="{{url_for('predict')}}">
+			<h2 class="form-signin-heading">Fill the Values below Please</h2>
+			{{ form.hidden_tag() }}
+			{{ wtf.form_field(form.age) }}
+			{{ wtf.form_field(form.male) }}
+			{{ wtf.form_field(form.scholarship) }}
+			{{ wtf.form_field(form.diabetes) }}
+			{{ wtf.form_field(form.alcoholism) }}
+			{{ wtf.form_field(form.handcap) }}
+			{{ wtf.form_field(form.hipertension) }}
+
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Predict Show or NoShow</button>
+		</form>
+	</div>
+</div>
+
+
+{% endblock %}
